@@ -39,5 +39,5 @@ tasks.named('test') {
 }
 
 bootJar {
-	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+	duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }
