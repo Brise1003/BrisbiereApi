@@ -39,6 +39,7 @@ tasks.named('test') {
 }
 
 jar {
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 	manifest {
 		attributes(
 				'Main-Class': 'org.springframework.boot.loader.JarLauncher',
@@ -55,3 +56,13 @@ jar {
 	}
 }
 
+tasks.withType(Jar) {
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+	manifest {
+		attributes (
+				'Main-Class': 'org.springframework.boot.loader.JarLauncher',
+				'Start-Class': 'com.brisbiere.Brisbiere.BrisbiereApplication'
+		)
+	}
+}
