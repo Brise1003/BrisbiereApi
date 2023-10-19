@@ -42,8 +42,7 @@ jar {
 	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 	manifest {
 		attributes(
-				'Main-Class': 'org.springframework.boot.loader.JarLauncher',
-				'Start-Class': 'com.brisbiere.Brisbiere.BrisbiereApplication',
+				'Main-Class': 'com.brisbiere.Brisbiere.BrisbiereApplication',
 				'Spring-Boot-Version': '3.0.4',
 				'Spring-Boot-Classes': 'BOOT-INF/classes/',
 				'Spring-Boot-Lib': 'BOOT-INF/lib/',
@@ -61,8 +60,7 @@ tasks.withType(Jar) {
 
 	manifest {
 		attributes (
-				'Main-Class': 'org.springframework.boot.loader.JarLauncher',
-				'Start-Class': 'com.brisbiere.Brisbiere.BrisbiereApplication'
+				'Main-Class': 'com.brisbiere.Brisbiere.BrisbiereApplication'
 		)
 	}
 }

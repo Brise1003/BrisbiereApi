@@ -1,6 +1,5 @@
 Manifest-Version: 1.0
-Main-Class: org.springframework.boot.loader.JarLauncher
-Start-Class: com.brisbiere.Brisbiere.BrisbiereApplication
+Main-Class: com.brisbiere.Brisbiere.BrisbiereApplication
 Spring-Boot-Version: 3.0.4
 Spring-Boot-Classes: BOOT-INF/classes/
 Spring-Boot-Lib: BOOT-INF/lib/
