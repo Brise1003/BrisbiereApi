@@ -59,5 +59,5 @@ function sendEmail(){
 	let body = document.getElementById("body").value;
 	let subjectLine = "Comentario: " + document.getElementById("nombre").value + " - " + document.getElementById("telefono").value;
 
-	window.location.href = "mailto: example@mail.com?subject=" + subjectLine + "&body=" + body; 
+	window.location.href = "mailto: brisbiere@brisbiere.com?subject=" + subjectLine + "&body=" + body; 
 }
