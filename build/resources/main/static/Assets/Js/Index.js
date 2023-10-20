@@ -1,4 +1,3 @@
-const Swal = require('sweetalert2');
 obtener_localstorage();
 
 function obtener_localstorage() {
