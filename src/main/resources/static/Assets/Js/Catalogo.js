@@ -18,7 +18,12 @@ function updateFiltro(catalogo){
 function showItems(div_Productos) {  
     fetch('http://localhost:8090/brisbiere/api/products/' + localStorage.filtro, {
         mode: "no-cors",
-        method: 'get' 
+        method: 'get',
+        headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json',
+			
+		}
     })
     .then(function(response) {
         response.json().then(function (json) { 
