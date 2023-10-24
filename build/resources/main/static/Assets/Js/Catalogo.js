@@ -17,7 +17,8 @@ function updateFiltro(catalogo){
 
 function showItems(div_Productos) {  
     fetch('http://localhost:8090/brisbiere/api/products/' + localStorage.filtro, {
-    method: 'get' 
+        mode: "no-cors",
+        method: 'get' 
     })
     .then(function(response) {
         response.json().then(function (json) { 
@@ -48,6 +49,7 @@ async function loadBeers(){
 
     const request = await fetch('http://localhost:8090/brisbiere/api/products/available?sortDirection=' + localStorage.filtro,{
         method : 'GET',
+        mode: "no-cors",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
