@@ -75,7 +75,7 @@ async function login() {
 
 	console.log(datos);
 
-	const request = await fetch('http://brisbiere-338c84ebe99a.herokuapp.com:8080/brisbiere/api/auth/signin',{
+	const request = await fetch('http://localhost:8080/brisbiere/api/auth/signin',{
 		method: 'POST',
 		headers: {
 			'Accept': 'application/json',
