@@ -75,8 +75,9 @@ async function login() {
 
 	console.log(datos);
 
-	const request = await fetch('http://localhost:8080/brisbiere/api/auth/signin',{
+	const request = await fetch('http://localhost:8090/brisbiere/api/auth/signin',{
 		method: 'POST',
+		mode: "no-cors",
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json',
