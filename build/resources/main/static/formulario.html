@@ -99,7 +99,82 @@
 <!------------------------------------------------------
                   Formulario Registro
 -------------------------------------------------------->
-
+<div class="container bg-white bg-opacity-75 rounded-4 shadow bg d-lg-block col-xl-6 rounded-4" id="contenedorForm">
+  <div class="col p-5">
+    <div class="text-black align-content-center">
+      <img src="./Assets/Img/logo.png" width="100px" alt="">
+    </div>
+    <div id="titulo">
+      <h3 class="fw-bold text-center py-5">Crear Cuenta</h3>
+    </div>
+    <div class="justify-content-center align-items-center">
+      <form class="form" id="singUp">
+        <div class="form__group mb-3" id="group__nombre">
+          <label for="nombre" class="form__label">Nombre(s)</label>
+          <div class="form__group-input">
+            <input type="text" class="form__input" name="nombre" id="nombre" aria-describedby="nombreHelp" required
+              placeholder="Ingrese su nombre">
+            <i class="form__validacion-estado bi bi-x-circle-fill"></i>
+          </div>
+          <p class="form__input-error">Favor de solo ingresar letras y espacios</p>
+        </div>
+        <div class="form__group mb-3" id="group__apellido">
+          <label for="apellido" class="form__label">Apellidos</label>
+          <div class="col-sm form__group-input">
+            <input type="text" class="form__input" name="apellido" id="apellido" aria-describedby="apellidoHelp"
+              placeholder="Ingrese sus apellidos">
+            <i class="form__validacion-estado bi bi-x-circle-fill"></i>
+          </div>
+          <p class="form__input-error">Favor de solo ingresar letras y espacios</p>
+        </div>
+        <div class="form__group mb-3" id="group__fecha">
+          <label for="fecha" class="form__label">Fecha de Nacimiento</label>
+          <div class="col-sm  form__group-input">
+            <input type="date" class="form__input" name="fecha" id="fecha" aria-describedby="cumpleañosHelp">
+          </div>
+        </div>
+        <div class="form__group mb-3" id="group__correo">
+          <label for="correo" class="form__label">Correo Electrónico</label>
+          <div class="col-sm form__group-input">
+            <input type="email" class="form__input" name="correo" id="correo" aria-describedby="emailHelp"
+              placeholder="correo@ejemplo.com">
+            <i class="form__validacion-estado bi bi-x-circle-fill"></i>
+          </div>
+          <p class="form__input-error">Favor de ingresar un correo valido</p>
+        </div>
+        <div class="form__group mb-3" id="group__password">
+          <label for="password" class="form__label">Ingrese Contraseña</label>
+          <div class="col-sm form__group-input">
+            <input id="password" type="Password" name="password" Class="form__input">
+            <i class="form__validacion-estado bi bi-x-circle-fill"></i>
+          </div>
+          <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"><span class="fa fa-eye-slash icon"></span> </button>
+          <p class="form__input-error">La contraseña debe contener minimo 8 caracteres, al menos una letra mayuscula,
+            una letra minuscula y un número</p>
+        </div>
+        <div class="form__group mb-3" id="group__password2">
+          <label for="password2" class="form__label">Confirmar Contraseña</label>
+          <div class="col-sm form__group-input">
+            <input id="password2" type="Password" name="password2" Class="form__input">
+            <i class="form__validacion-estado bi bi-x-circle-fill"></i>
+          </div>
+          <button id="show_password2" class="btn btn-primary" type="button" onclick="mostrarPassword2()"> <span class="fa fa-eye-slash icon"></span> </button>
+          <p class="form__input-error">El campo no coincide con su contraseña, favor de corregirlo</p>
+        </div>
+        <div class="form__group mb-3" id="group__confirma">
+          <label class="form__label"><input class="form__checkbox" type="checkbox" name="confirma" id="confirma">Confirmo que soy mayor de edad +18</label>
+        </div>
+        <div class="form__mensaje" id="form__mensaje">
+          <p><i class="bi bi-exclamation-triangle-fill"></i><b>Error</b> Por favor rellenar todos los campos</p>
+        </div>
+        <div class="form__group form__group-btn-enviar">
+          <button type="submit" class="form__btn" onclick="addEventListener">Crear Cuenta</button>
+          <p class="form__mensaje-exito">Formulario enviado exitosamente</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 <!------------------------------------------------------
                   Footer
 -------------------------------------------------------->
