@@ -87,7 +87,7 @@ paypal.Buttons({
     },
     // Sets up the transaction when a PayPal payment button is clicked
     createOrder: async (data, actions) => {
-        const response = await fetch("http://localhost:8090/brisbiere/api/paypal/order", {
+        const response = await fetch("https://brisbiere-338c84ebe99a.herokuapp.com/brisbiere/api/paypal/order", {
             method: "post",
             headers: {
                 'Accept': 'application/json',
@@ -103,7 +103,7 @@ paypal.Buttons({
     },
     // Finalize the transaction after payer approval
     onApprove: async (data, actions) => {
-        const response = await fetch(`http://localhost:8090/brisbiere/api/paypal/order/${data.orderID}/capture`, {
+        const response = await fetch(`https://brisbiere-338c84ebe99a.herokuapp.com/brisbiere/api/paypal/order/${data.orderID}/capture`, {
             method: "post"
         });
         const orderData = await response.json();
@@ -129,7 +129,7 @@ async function saveOrder(){
     let totalProducts = JSON.parse(localStorage.totalProducts);
     let date = new Date().toLocaleString("sv-SE");
 
-    const lastOrderIdRequest = await fetch('http://localhost:8090/brisbiere/api/orders/lastOrderId', {
+    const lastOrderIdRequest = await fetch('https://brisbiere-338c84ebe99a.herokuapp.com/brisbiere/api/orders/lastOrderId', {
     method: 'GET',
     headers: {
       'Accept': 'application/json',
@@ -190,7 +190,7 @@ async function saveOrder(){
         "items": orderItemsArray
     }
 
-    const request = await fetch('http://localhost:8090/brisbiere/api/orders/save', {
+    const request = await fetch('https://brisbiere-338c84ebe99a.herokuapp.com/brisbiere/api/orders/save', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -218,7 +218,7 @@ async function sendEmail(){
 
     console.log(emailRequest);
 
-    const request = await fetch("http://localhost:8090/brisbiere/api/email/sendMessage",{
+    const request = await fetch("https://brisbiere-338c84ebe99a.herokuapp.com/brisbiere/api/email/sendMessage",{
         method: 'POST',
         headers:{
             'Accept': 'application/json',

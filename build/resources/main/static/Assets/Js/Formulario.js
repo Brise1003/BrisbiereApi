@@ -157,7 +157,7 @@ async function registerUser() {
   console.log(datos);
   
 
-  const request = await fetch('http://localhost:8090/brisbiere/api/auth/signup', {
+  const request = await fetch('https://brisbiere-338c84ebe99a.herokuapp.com/brisbiere/api/auth/signup', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
