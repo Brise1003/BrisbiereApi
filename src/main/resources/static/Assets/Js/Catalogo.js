@@ -32,7 +32,7 @@ function showItems(div_Productos) {
                 div_Productos.innerHTML += `
                 <div class="col-sm-3 pb-3">
                     <div class="item card md-3">
-                        <figure><img class="card-image-top" role="img" src="Assets/img/${p.image}" /></figure>
+                        <figure><img class="card-image-top" role="img" src="Assets/Img/${p.image}" /></figure>
                         <div class="card-body info-product">
                             <strong>${p.name}</strong>
                             <p>${p.description}</p>
