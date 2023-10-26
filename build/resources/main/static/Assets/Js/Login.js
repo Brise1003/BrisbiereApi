@@ -112,7 +112,7 @@ window.addEventListener("click", function(e){
 			login();
 			break;
 		case "register":
-			window.location.href = "Formulario.html";
+			window.location.href = "formulario.html";
 			break;
 	}
 
