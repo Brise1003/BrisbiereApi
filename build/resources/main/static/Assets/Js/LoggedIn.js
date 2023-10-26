@@ -2,7 +2,7 @@
 async function loggedIn(){
 
     if(localStorage.getItem("usuarioId")!= null){
-        window.location.href= "./Envio.html";  
+        window.location.href= "envio.html";  
     } else{
         Swal.fire({
             title: 'Hola!',
