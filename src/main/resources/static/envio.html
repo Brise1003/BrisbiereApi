@@ -96,7 +96,203 @@
 
   <!-- -------------------FORMULARIO------------------------ -->
 
- 
+  <div class="container bg-white bg-opacity-75 rounded-4 shadow">
+    <div class="row my-5">
+      <div class="col p-4">
+        <div class="text-black align-content-center">
+          <img src="./Assets/Img/logo.png" width="100px" alt="">
+        </div>
+        <h2 class="fw-bold text-center py-5">Datos de envío</h2>
+        <h5>Datos del destinatario</h5>
+        <form class="formulario" id="formulario" action="#">
+          <div class="row">
+            <div class="form-group formulario__grupo col-md-4" id="grupo__nombre">
+              <div class="grupo__nombre">
+                <label for="nombre">Nombre(s)*
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="form-control" id="nombre" name="nombre"
+                    placeholder="Nombre del destinatario">
+                </div>
+                <p class="formulario__input-error">Únicamente letras</p>
+              </div>
+            </div>
+            <div class="form-group formulario__grupo col-md-4" id="grupo__apellidoP">
+              <div class="grupo__apellidoP">
+                <label for="apellidoP">Apellido paterno*
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="form-control" id="apellidoP" name="apellidoP"
+                    placeholder="Apellido Paterno">
+                </div>
+                <p class="formulario__input-error">Únicamente letras</p>
+              </div>
+            </div>
+            <div class="form-group formulario__grupo col-md-4" id="grupo__apellidoM">
+              <div class="grupo__apellidoM">
+                <label for="apellidoM">Apellido materno
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="form-control" id="apellidoM" name="apellidoM"
+                    placeholder="Apellido Materno">
+                </div>
+                <p class="formulario__input-error">Únicamente letras</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h5 class="dir">Dirección de envio</h5>
+          </div>
+          <div class="row">
+            <div class="form-group formulario__grupo col-md-6" id="grupo__direccion">
+              <div class="grupo__direccion">
+                <label for="direccion">Dirección*
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="form-control" id="direccion" name="direccion"
+                    placeholder="Calle Lázaro Cárdenas">
+                </div>
+                <p class="formulario__input-error">Únicamente letras</p>
+              </div>
+            </div>
+            <div class="form-group formulario__grupo col-md-3" id="grupo__numero">
+              <div class="grupo__numero">
+                <label for="numero">Número exterior*
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="form-control" id="numero" name="numero" placeholder="1234">
+                </div>
+                <p class="formulario__input-error">Ingrese un dato valido</p>
+              </div>
+            </div>
+            <div class="form-group formulario__grupo col-md-3" id="grupo__int">
+              <div class="grupo__int">
+                <label for="int">Número interior
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="form-control" id="int" placeholder="5">
+                </div>
+                <p class="formulario__input-error">Ingrese un dato valido</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group formulario__grupo col-md-3" id="grupo__ciudad">
+              <div class="grupo__ciudad">
+                <label for="ciudad">Ciudad*
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Guadalajara">
+                </div>
+                <p class="formulario__input-error">Ingrese un dato valido</p>
+              </div>
+            </div>
+            <div class="form-group formulario__grupo col-md-3" id="grupo__estado">
+              <div class="grupo__estado">
+                <label for="estado" id="estado">Estado*</label>
+                <select id="estado" class="form-control custom-select" required name="estado">
+                  <option value="">Seleccione su estado...</option>
+                  <option value="1 Aguascalientes">Aguascalientes</option>
+                  <option value="2 Baja California">Baja California</option>
+                  <option value="3 Baja California Sur">Baja California Sur</option>
+                  <option value="4 Campeche">Campeche</option>
+                  <option value="5 Chiapas">Chiapas</option>
+                  <option value="6 Chihuahua">Chihuahua</option>
+                  <option value="7 Ciudad de México">Ciudad de México</option>
+                  <option value="8 Coahuila">Coahuila</option>
+                  <option value="9 Colima">Colima</option>
+                  <option value="10 Durango">Durango</option>
+                  <option value="11 Guanajuato">Guanajuato</option>
+                  <option value="12 Guerrero">Guerrero</option>
+                  <option value="13 Hidalgo">Hidalgo</option>
+                  <option value="14 Jalisco">Jalisco</option>
+                  <option value="15 México">México</option>
+                  <option value="16 Michoacán">Michoacán</option>
+                  <option value="17 Morelos">Morelos</option>
+                  <option value="18 Nayarit">Nayarit</option>
+                  <option value="19 Nuevo León">Nuevo León</option>
+                  <option value="20 Oaxaca">Oaxaca</option>
+                  <option value="21 Puebla">Puebla</option>
+                  <option value="22 Querétaro">Querétaro</option>
+                  <option value="23 Quintana Roo">Quintana Roo</option>
+                  <option value="24 San Luis Potosí">San Luis Potosí</option>
+                  <option value="25 Sinaloa">Sinaloa</option>
+                  <option value="26 Sonora">Sonora</option>
+                  <option value="27 Tabasco">Tabasco</option>
+                  <option value="28 Tamaulipas">Tamaulipas</option>
+                  <option value="29 Tlaxcala">Tlaxcala</option>
+                  <option value="30 Veracruz">Veracruz</option>
+                  <option value="31 Yucatán">Yucatán</option>
+                  <option value="32 Zacatecas">Zacatecas</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group formulario__grupo col-md-3" id="grupo__cp">
+              <div class="grupo__cp">
+                <label for="cp">Código postal*
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="form-control" id="cp" name="cp" placeholder="12345">
+                </div>
+                <p class="formulario__input-error">Ingrese CP valido</p>
+              </div>
+            </div>
+            <div class="form-group formulario__grupo col-md-3" id="grupo__colonia">
+              <div class="grupo__colonia">
+                <label for="colonia">Colonia*
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="form-control" id="colonia" name="colonia" placeholder="Centro">
+                </div>
+                <p class="formulario__input-error">Ingrese un dato valido</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group formulario__grupo col-md-9" id="grupo__referencias">
+              <div class="grupo__referencias">
+                            <label for="referencias">Referencias adicionales
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="form-control" id="referencias"
+                    placeholder="Cruces de calles o referencias de su domicilio">
+                </div>
+              </div>
+            </div>
+            <div class="form-group formulario__grupo col-md-3" id="grupo__telefono">
+              <div class="grupo__telefono">
+                <label for="telefono">Telefono*
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </label>
+                <div class="formulario__grupo-input">
+                  <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="1234567899">
+                </div>
+                <p class="formulario__input-error">Ingrese un dato valido</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p>Los campos marcados con "*" son obligatorios</p>
+          </div>
+          <center>
+            <div class="my-2 p-1">
+              <a id="formaPago"><button type="submit" class="btn btn-outline-dark">Proceder al pago</button></a>
+            </div>
+          </center>
+        </form>
+      </div>
+    </div>
+  </div>
 
 
   <!-- FOOTER -->
