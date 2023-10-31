@@ -21,8 +21,7 @@ function showItems(div_Productos) {
         method: 'get',
         headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json',
-			
+			'Content-Type': 'application/json'
 		}
     })
     .then(function(response) {
