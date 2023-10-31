@@ -80,11 +80,11 @@ async function login() {
 		mode: "no-cors",
 		headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
 		},
-		body: JSON.stringify(datos)
+		body: datos
 	})
-	const respuesta = await JSON.parse(request);
+	const respuesta = await request.json();
 
 	console.log(respuesta);
 
