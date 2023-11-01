@@ -87,7 +87,7 @@ async function login() {
 
 	console.log(respuesta);
 
-	if (respuesta.status=="200") {
+	if (respuesta.Status == "200") {
 		localStorage.token = respuesta;
 		localStorage.email = datos.username;
 		alert("Ha iniciado sesión como " + localStorage.email);
