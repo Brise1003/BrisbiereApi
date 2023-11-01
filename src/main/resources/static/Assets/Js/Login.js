@@ -77,7 +77,6 @@ async function login() {
 
 	const request = await fetch('https://brisbiere-338c84ebe99a.herokuapp.com/brisbiere/api/auth/signin',{
 		method: 'POST',
-		//mode: "no-cors",
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
@@ -88,7 +87,7 @@ async function login() {
 
 	console.log(respuesta);
 
-	if (respuesta!="") {
+	if (respuesta.status=="200") {
 		localStorage.token = respuesta;
 		localStorage.email = datos.username;
 		alert("Ha iniciado sesión como " + localStorage.email);
