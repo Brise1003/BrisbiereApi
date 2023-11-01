@@ -84,7 +84,7 @@ async function login() {
 		},
 		body: JSON.stringify(datos)
 	})
-	const respuesta = await JSON.stringify(request);
+	const respuesta = await JSON.parse(request);
 
 	console.log(respuesta);
 
