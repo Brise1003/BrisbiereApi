@@ -158,12 +158,12 @@ async function registerUser() {
   
 
   const request = await fetch('https://brisbiere-338c84ebe99a.herokuapp.com/brisbiere/api/auth/signup', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(datos)
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(datos)
   });
   // const usuarios = await request.json();
   window.location.href = './Login.html';

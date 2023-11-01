@@ -77,12 +77,12 @@ async function login() {
 
 	const request = await fetch('https://brisbiere-338c84ebe99a.herokuapp.com/brisbiere/api/auth/signin',{
 		method: 'POST',
-		mode: "no-cors",
+		//mode: "no-cors",
 		headers: {
-			"Accept": "application/json",
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify(datos)
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		  },
+		body: datos
 	})
 	const respuesta = await request.json();
 
