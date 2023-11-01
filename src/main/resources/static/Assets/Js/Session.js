@@ -71,5 +71,9 @@ async function eliminarUsuario(){
         }
     });
 
+    setTimeout(() => {
+        console.log("3 Segundo esperado")
+      }, 3000);
+
     window.location.href = './Index.html'; 
 }

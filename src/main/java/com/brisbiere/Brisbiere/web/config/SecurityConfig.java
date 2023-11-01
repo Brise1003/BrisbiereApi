@@ -39,7 +39,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.GET).permitAll()
                 .requestMatchers(HttpMethod.GET,"/products/available").permitAll()
                 .requestMatchers("/auth/**").permitAll()
-                .requestMatchers(HttpMethod.DELETE,"/users/delete/*").permitAll()
+                .requestMatchers(HttpMethod.DELETE,"/users/delete/*").hasAnyRole("ADMIN", "CUSTOMER")
                 .requestMatchers("/users/**").hasAnyRole("ADMIN", "CUSTOMER")
                 .requestMatchers(HttpMethod.POST).permitAll()
                 .requestMatchers(HttpMethod.GET,"/products/available").hasAnyRole("ADMIN", "CUSTOMER")
