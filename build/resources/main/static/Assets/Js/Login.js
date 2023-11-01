@@ -82,7 +82,7 @@ async function login() {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json',
 		},
-		body: JSON.stringify(datos.text())
+		body: JSON.stringify(datos)
 	})
 	const respuesta = await JSON.parse(request);
 
