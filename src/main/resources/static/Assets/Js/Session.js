@@ -21,7 +21,7 @@ async function loadUser(){
     var age = Date.now() - birthday;
     var year = Math.floor(age / 31536000000);
 
-    let botonEliminar = '<button onclick="eliminarUsuario(' + usuario.userId + ')" type="button" class="btn btn-outline-dark" id="eraseAccountButton">Eliminar cuenta</button>';
+    let botonEliminar = '<button onclick="eliminarUsuario()" type="button" class="btn btn-outline-dark" id="eraseAccountButton">Eliminar cuenta</button>';
     
     let usuarioHtml = '<h3><strong>' + usuario.name + ' ' + usuario.lastname + ', ' + year + ' años</strong></h3>' + botonEliminar + '<p>' + usuario.email + '</p>';
 
@@ -70,7 +70,7 @@ async function eliminarUsuario(){
             'Authorization': localStorage.token 
         }
     });
-    const response = await request.json();
+    const response = await JSON.parse(request);
 
     console.log(response);
     console.log(request.Status);
