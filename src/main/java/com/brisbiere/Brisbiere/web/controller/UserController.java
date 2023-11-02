@@ -54,7 +54,7 @@ public class UserController {
             @ApiResponse(responseCode = "200", description = "Ok"),
             @ApiResponse(responseCode = "404", description = "Not found")
     })
-    public ResponseEntity<Void> deleteUser(@Parameter @PathVariable("id") int userId){
+    public ResponseEntity<String> deleteUser(@Parameter @PathVariable("id") int userId){
         return userService.delete(userId) ?
                 new ResponseEntity<>(HttpStatus.OK):
                 new ResponseEntity<>(HttpStatus.NOT_FOUND);
