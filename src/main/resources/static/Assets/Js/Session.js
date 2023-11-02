@@ -70,10 +70,14 @@ async function eliminarUsuario(){
             'Authorization': localStorage.token 
         }
     });
+    const response = await request.json();
 
-    setTimeout(() => {
-        console.log("3 Segundo esperado")
-      }, 3000);
+    console.log(response);
+    console.log(request.Status);
+    console.log(request.headers.get());
 
-    window.location.href = './Index.html'; 
+    if(response=="ok"){
+        window.location.href = './Index.html'; 
+    }
+    
 }
