@@ -6,7 +6,7 @@ window.addEventListener("load", function (){ //cuando se cargue la página
 
 async function loadUser(){
 
-    const request = await fetch('https://brisbiere-338c84ebe99a.herokuapp.com/users/email/'+ localStorage.email,{
+    const request = await fetch('https://brisbiere-338c84ebe99a.herokuapp.com/users/email/' + localStorage.email,{
         method : 'GET',
         headers: {
             'Accept': 'application/json',
@@ -62,7 +62,7 @@ async function loadOrders(){
 async function eliminarUsuario(){
     confirm("¿Está seguro que quiere eliminar su cuenta?");
 
-    const request = await fetch('https://brisbiere-338c84ebe99a.herokuapp.com/users/delete/'+localStorage.usuarioId,{
+    const request = await fetch('https://brisbiere-338c84ebe99a.herokuapp.com/users/delete/' + localStorage.usuarioId,{
         method : 'DELETE',
         headers: {
             'Accept': 'application/json',
@@ -76,7 +76,7 @@ async function eliminarUsuario(){
     console.log(request.Status);
     console.log(request.headers.get());
 
-    if(response=="ok"){
+    if(response == "User: Deleted"){
         window.location.href = './Index.html'; 
     }
     

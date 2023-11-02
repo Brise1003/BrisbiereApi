@@ -56,7 +56,7 @@ public class UserController {
     })
     public ResponseEntity<String> deleteUser(@Parameter @PathVariable("id") int userId){
         return userService.delete(userId) ?
-                new ResponseEntity<>(HttpStatus.OK):
+                new ResponseEntity<>("User: Deleted",HttpStatus.OK):
                 new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
