@@ -70,7 +70,7 @@ async function eliminarUsuario(){
             'Authorization': 'Bearer '+localStorage.token 
         }
     });
-    const resp = await request.json();
+    const resp = await request.text();
 
     console.log(resp);
 
