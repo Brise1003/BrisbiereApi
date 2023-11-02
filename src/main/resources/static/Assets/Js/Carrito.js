@@ -9,7 +9,7 @@ btnCart.addEventListener('click', () => {
 })
 /*******************************/
 window.addEventListener("load",()=>{
-    if(window.location.pathname==="/brisbiere/api/Catalogo.html"){
+    if(window.location.pathname==="/Catalogo.html"){
         
         productsList.addEventListener('click', e =>{
 
