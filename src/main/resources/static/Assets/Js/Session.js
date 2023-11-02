@@ -65,16 +65,14 @@ async function eliminarUsuario(){
     const request = await fetch('https://brisbiere-338c84ebe99a.herokuapp.com/users/delete/' + localStorage.usuarioId,{
         method : 'DELETE',
         headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
+            // 'Accept': 'application/json',
+            // 'Content-Type': 'application/json',
             'Authorization': localStorage.token 
         }
     });
-    const response = await JSON.parse(request);
+    const response = await request.json();
 
     console.log(response);
-    console.log(request.Status);
-    console.log(request.headers.get());
 
     if(response == "User: Deleted"){
         window.location.href = './Index.html'; 
