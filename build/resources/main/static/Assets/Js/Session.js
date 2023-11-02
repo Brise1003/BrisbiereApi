@@ -67,7 +67,7 @@ async function eliminarUsuario(){
         headers: {
             // 'Accept': 'application/json',
             // 'Content-Type': 'application/json',
-            'Authorization': localStorage.token 
+            'Authorization': 'Bearer '+localStorage.token 
         }
     });
     const response = await request.json();
