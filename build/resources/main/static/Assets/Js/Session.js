@@ -70,11 +70,11 @@ async function eliminarUsuario(){
             'Authorization': 'Bearer '+localStorage.token 
         }
     });
-    const response = await request.json();
+    const resp = await request.json();
 
-    console.log(response);
+    console.log(resp);
 
-    if(response == "User: Deleted"){
+    if(resp == "User: Deleted"){
         window.location.href = './Index.html'; 
     }
     
