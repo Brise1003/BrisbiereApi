@@ -16,7 +16,7 @@ function updateFiltro(catalogo){
 
 
 function showItems(div_Productos) {  
-    fetch('https://brisbiere-338c84ebe99a.herokuapp.com/products/' + localStorage.filtro, {
+    fetch('https://www.brisbiere.com/products/' + localStorage.filtro, {
         mode: "no-cors",
         method: 'get',
         headers: {
@@ -51,7 +51,7 @@ function showItems(div_Productos) {
 
 async function loadBeers(){
 
-    const request = await fetch('https://brisbiere.com/products/available?sortDirection=' + localStorage.filtro,{
+    const request = await fetch('https://www.brisbiere.com/products/available?sortDirection=' + localStorage.filtro,{
         method : 'GET',
         mode: "no-cors",
         headers: {
