@@ -51,7 +51,7 @@ function showItems(div_Productos) {
 
 async function loadBeers(){
 
-    const request = await fetch('https://brisbiere-338c84ebe99a.herokuapp.com/products/available?sortDirection=' + localStorage.filtro,{
+    const request = await fetch('https://brisbiere.com/products/available?sortDirection=' + localStorage.filtro,{
         method : 'GET',
         mode: "no-cors",
         headers: {
